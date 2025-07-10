@@ -287,7 +287,7 @@ const HeroSection = () => {
             rel="noopener noreferrer"
             className="btn-primary text-lg px-12 py-5 hover:scale-110 hover:border-2 hover:border-sage-700 transition-all duration-300 border-2 border-transparent"
           >
-            Let's Connect
+            Let&apos;s Connect
           </a>
           <a
             href="https://github.com/rowanarora" 
@@ -712,14 +712,14 @@ const ProjectsSection = () => {
         
         // Filter out personal-website and rowanArora repos, and get only public repos
         const filteredRepos = repos
-          .filter((repo: any) => 
+          .filter((repo: { private: boolean; name: string }) => 
             !repo.private && 
             repo.name !== 'personal-website' && 
             repo.name !== 'rowanArora' &&
             repo.name !== '.github'
           )
           .slice(0, 8) // Get top 8 most recently updated repos
-          .map((repo: any) => ({
+          .map((repo: { name: string; description: string | null; language: string | null; stargazers_count: number; html_url: string }) => ({
             name: repo.name.length > 25 ? `${repo.name.substring(0, 22)}...` : repo.name,
             fullName: repo.name,
             description: repo.description || 'No description available',
@@ -867,7 +867,7 @@ const CallToActionSection = () => {
     <section id="contact" className="py-24 px-6 bg-gradient-to-t from-cream-50/50 to-transparent relative z-10">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-6xl md:text-7xl font-bold mb-12 gradient-text hover:text-sage-500 transition-colors duration-300">
-          Let's Build Something Epic
+          Let&apos;s Build Something Epic
         </h2>
         
         <p className="text-2xl text-sage-800 mb-16 max-w-4xl mx-auto leading-relaxed">
