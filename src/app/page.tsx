@@ -350,8 +350,8 @@ const AboutSection = () => {
               <div>
                 <h4 className="text-xl font-bold text-sage-700 mb-3">💼 Current Focus</h4>
                 <p className="text-lg text-sage-800 leading-relaxed">
-                                   Currently at <span className="font-bold text-sage-600">ContractPodAI</span>, I'm building Leah, an AI-powered 
-                 legal assistant that's revolutionizing how Fortune 500 companies handle contract analysis. I've architected backend 
+                                   Currently at <span className="font-bold text-sage-600">ContractPodAI</span>, I&apos;m building Leah, an AI-powered 
+                                    legal assistant that&apos;s revolutionizing how Fortune 500 companies handle contract analysis. I&apos;ve architected backend 
                   systems processing millions of legal documents, designed Azure cloud infrastructure, and built APIs serving thousands of users daily.
                 </p>
               </div>
@@ -360,8 +360,8 @@ const AboutSection = () => {
                  <h4 className="text-xl font-bold text-sage-700 mb-3">🎯 How I Code</h4>
                  <p className="text-lg text-sage-800 leading-relaxed">
                    I start by understanding the problem deeply before writing any code, then build a simple brute-force solution and iterate 
-                   until it's as efficient as I can make it. Clean code matters too. Poorly named variables and missing comments drive me absolutely 
-                   crazy. If you can't understand what your code does six months later, you're doing it wrong.
+                   until it&apos;s as efficient as I can make it. Clean code matters too. Poorly named variables and missing comments drive me absolutely 
+                   crazy. If you can&apos;t understand what your code does six months later, you&apos;re doing it wrong.
                  </p>
                </div>
                
@@ -427,8 +427,22 @@ const AboutSection = () => {
 };
 
 // Experience Section Component with enhanced hover effects
+interface Experience {
+  title: string;
+  company: string;
+  companyUrl: string;
+  location: string;
+  period: string;
+  description: string;
+  details: string;
+  previewAchievements: string[];
+  achievements: string[];
+  tags: string[];
+  fullDescription: string;
+}
+
 const ExperienceSection = () => {
-  const [selectedExperience, setSelectedExperience] = useState<any>(null);
+  const [selectedExperience, setSelectedExperience] = useState<Experience | null>(null);
 
   const experiences = [
     {
@@ -454,7 +468,7 @@ const ExperienceSection = () => {
         "Built real-time document processing pipeline handling 10,000+ documents daily"
       ],
       tags: ["Python", "FastAPI", "Azure", "MongoDB", "Docker", "Redis", "PostgreSQL", "Machine Learning", "REST APIs", "Microservices"],
-      fullDescription: "At ContractPodAI, I'm working on Leah, an revolutionary AI-powered legal assistant that's transforming how Fortune 500 companies handle contract analysis. My role involves architecting scalable backend systems that process millions of legal documents daily. I've been responsible for designing the core API infrastructure, implementing cloud-based processing pipelines, and ensuring the system can handle enterprise-scale workloads with high availability and performance."
+      fullDescription: "At ContractPodAI, I&apos;m working on Leah, an revolutionary AI-powered legal assistant that&apos;s transforming how Fortune 500 companies handle contract analysis. My role involves architecting scalable backend systems that process millions of legal documents daily. I&apos;ve been responsible for designing the core API infrastructure, implementing cloud-based processing pipelines, and ensuring the system can handle enterprise-scale workloads with high availability and performance."
     },
     {
       title: "Lead Software Developer", 
@@ -620,9 +634,31 @@ const ExperienceSection = () => {
 };
 
 // Projects Section Component with comprehensive tags and fixed GitHub titles
+interface Project {
+  title: string;
+  subtitle: string;
+  description: string;
+  tags: string[];
+  githubUrl: string;
+  link: string;
+  featured?: boolean;
+  fullDescription: string;
+  technicalDetails?: string[];
+}
+
+interface GitHubProject {
+  name: string;
+  fullName: string;
+  description: string;
+  language: string;
+  stars: number;
+  url: string;
+  starred: boolean;
+}
+
 const ProjectsSection = () => {
-  const [selectedProject, setSelectedProject] = useState<any>(null);
-  const [githubProjects, setGithubProjects] = useState<any[]>([]);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [githubProjects, setGithubProjects] = useState<GitHubProject[]>([]);
   const [loading, setLoading] = useState(true);
 
   const featuredProjects = [
@@ -698,7 +734,7 @@ const ProjectsSection = () => {
         console.error('Error fetching GitHub repos:', error);
         // Fallback data in case API fails
         setGithubProjects([
-          { name: "Loading GitHub repos...", description: "Fetching latest repositories", language: "JavaScript", url: "#", starred: false }
+          { name: "Loading GitHub repos...", fullName: "Loading GitHub repos...", description: "Fetching latest repositories", language: "JavaScript", stars: 0, url: "#", starred: false }
         ]);
       } finally {
         setLoading(false);
@@ -835,9 +871,9 @@ const CallToActionSection = () => {
         </h2>
         
         <p className="text-2xl text-sage-800 mb-16 max-w-4xl mx-auto leading-relaxed">
-          I'm always excited about new opportunities, innovative projects, and connecting with 
-          fellow builders. Whether it's discussing the latest in AI, debating system architecture, 
-          or collaborating on the next big thing, let's create something extraordinary together!
+          I&apos;m always excited about new opportunities, innovative projects, and connecting with 
+          fellow builders. Whether it&apos;s discussing the latest in AI, debating system architecture, 
+                     or collaborating on the next big thing, let&apos;s create something extraordinary together!
         </p>
         
         <div className="flex flex-col sm:flex-row gap-8 justify-center">

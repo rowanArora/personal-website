@@ -1,36 +1,149 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rowan Arora - Personal Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website showcasing my experience as a Backend Developer and AI enthusiast. Built with Next.js 15, TypeScript, and Tailwind CSS featuring a clean sage green and cream design.
 
-First, run the development server:
+## 🚀 Features
 
+- **Interactive Design**: Mouse-responsive floating orbs and animated background elements
+- **Authentic Content**: Real personal story, genuine coding approach, and actual project details
+- **Smart Navigation**: Active section detection with colored borders for current page location
+- **Comprehensive Skills**: Technologies organized by Languages, Frameworks, Databases, and Tools
+- **Project Showcase**: Featured projects with detailed modals and GitHub integration
+- **Professional Experience**: Three positions with expandable details and achievement metrics
+- **Responsive Layout**: Optimized for all screen sizes with glass morphism effects
+- **Resume Integration**: Direct PDF download functionality
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.3.5 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v3 with custom sage/cream color palette
+- **Fonts**: Optimized with `next/font`
+- **Deployment**: Optimized for Vercel/Netlify
+
+## 🎨 Design Features
+
+- **Color Scheme**: Custom sage green (#8a9d73, #6f8159) and cream (#fefcf9, #f5e4c1) palette
+- **Interactive Elements**: Hover effects with colored borders on all clickable elements
+- **Glass Morphism**: Backdrop blur effects and translucent cards
+- **Smooth Animations**: Rotating technology text and floating background elements
+- **Professional Photography**: Profile photo with enhanced colored border
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css          # Global styles and custom CSS
+│   ├── layout.tsx           # Root layout with metadata
+│   └── page.tsx             # Main portfolio page
+public/
+├── profile-photo.jpeg       # Profile image
+├── Rowan-Arora-Resume.pdf  # Downloadable resume
+└── [other assets]
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/rowanArora/personal-website.git
+cd personal-website
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## 📝 Content Sections
 
-To learn more about Next.js, take a look at the following resources:
+1. **Hero Section**: Introduction with rotating technology showcase and stats
+2. **About Me**: Personal journey, current focus, and coding philosophy  
+3. **Experience**: Three professional positions with detailed achievements
+4. **Projects**: Featured projects with technical implementation details
+5. **Contact**: Professional links and call-to-action
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Colors
+The color palette is defined in `tailwind.config.ts`:
+```typescript
+colors: {
+  sage: {
+    50: '#f7f9f5', 100: '#eef2ea', // ... custom sage colors
+  },
+  cream: {
+    50: '#fefcf9', 100: '#f5e4c1', // ... custom cream colors
+  }
+}
+```
 
-## Deploy on Vercel
+### Content
+- Update personal information in `src/app/page.tsx`
+- Replace profile photo in `public/profile-photo.jpeg`
+- Update resume in `public/Rowan-Arora-Resume.pdf`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 Deployment Options
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Recommended: Vercel (Free)
+1. Push code to GitHub
+2. Connect repository at [vercel.com](https://vercel.com)
+3. Automatic deployments on push
+
+### Alternative: Netlify (Free)
+1. Push code to GitHub  
+2. Connect repository at [netlify.com](https://netlify.com)
+3. Configure build settings: `npm run build` / `out` directory
+
+## 📱 Responsive Design
+
+- **Mobile**: Single column layout with optimized navigation
+- **Tablet**: Balanced two-column sections
+- **Desktop**: Full multi-column layout with enhanced interactions
+
+## 🎯 Performance Optimizations
+
+- Next.js automatic code splitting
+- Optimized images with `next/image`
+- Efficient CSS with Tailwind's purging
+- Smooth animations with CSS transforms
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contact
+
+**Rowan Arora**
+- LinkedIn: [linkedin.com/in/rowanarora](https://www.linkedin.com/in/rowanarora/)
+- GitHub: [github.com/rowanarora](https://github.com/rowanarora)
+- Email: rowan.arora@icloud.com
+
+---
+
+Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
