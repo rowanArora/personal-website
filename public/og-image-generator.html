@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        .og-container {
+            width: 1200px;
+            height: 630px;
+            background: #fefcf9;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding: 80px;
+            box-sizing: border-box;
+        }
+        
+        .left-content {
+            flex: 1;
+            color: #333;
+            max-width: 600px;
+        }
+        
+        .name {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #2d3748;
+            line-height: 1.1;
+        }
+        
+        .title {
+            font-size: 32px;
+            margin-bottom: 24px;
+            color: #6f8159;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+        
+        .description {
+            font-size: 20px;
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+        
+        .domain {
+            font-size: 24px;
+            font-weight: 600;
+            color: #8a9d73;
+            background: #f7f9f5;
+            padding: 12px 24px;
+            border-radius: 12px;
+            border: 2px solid #e2e8d5;
+            display: inline-block;
+        }
+        
+        .right-visual {
+            flex: 0 0 400px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .code-window {
+            width: 350px;
+            height: 250px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        }
+        
+        .window-controls {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .control {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .control.red { background: #ff5f57; }
+        .control.yellow { background: #ffbd2e; }
+        .control.green { background: #28ca42; }
+        
+        .code-content {
+            color: #e6e6e6;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .comment { color: #6a9955; }
+        .keyword { color: #569cd6; }
+        .string { color: #ce9178; }
+        .function { color: #dcdcaa; }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .floating-dot {
+            position: absolute;
+            border-radius: 50%;
+            background: #8a9d73;
+            opacity: 0.1;
+        }
+        
+        .dot1 { width: 80px; height: 80px; top: 50px; right: 150px; }
+        .dot2 { width: 120px; height: 120px; bottom: 100px; left: 50px; }
+        .dot3 { width: 60px; height: 60px; top: 200px; right: 50px; }
+    </style>
+</head>
+<body>
+    <div class="og-container">
+        <div class="floating-elements">
+            <div class="floating-dot dot1"></div>
+            <div class="floating-dot dot2"></div>
+            <div class="floating-dot dot3"></div>
+        </div>
+        
+        <div class="left-content">
+            <div class="name">Rowan Arora</div>
+            <div class="title">Backend Developer & AI Enthusiast</div>
+            <div class="description">Building scalable systems at ContractPodAI</div>
+            <div class="domain">rowanaurora.dev</div>
+        </div>
+        
+        <div class="right-visual">
+            <div class="code-window">
+                <div class="window-controls">
+                    <div class="control red"></div>
+                    <div class="control yellow"></div>
+                    <div class="control green"></div>
+                </div>
+                <div class="code-content">
+                    <div><span class="comment">// Building the future</span></div>
+                    <div><span class="keyword">const</span> <span class="function">developer</span> = {</div>
+                    <div>&nbsp;&nbsp;name: <span class="string">"Rowan Arora"</span>,</div>
+                    <div>&nbsp;&nbsp;passion: <span class="string">"Backend + AI"</span>,</div>
+                    <div>&nbsp;&nbsp;experience: <span class="string">"5+ years"</span>,</div>
+                    <div>&nbsp;&nbsp;currentRole: <span class="string">"ContractPodAI"</span></div>
+                    <div>};</div>
+                    <div><br></div>
+                    <div><span class="function">buildAmazingThings</span>();</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
