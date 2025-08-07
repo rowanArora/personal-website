@@ -39,9 +39,11 @@ src/
 │   └── page.tsx             # Main portfolio page
 public/
 ├── profile-photo.jpeg       # Profile image
-├── Rowan-Arora-Resume.pdf  # Downloadable resume
 └── [other assets]
 ```
+
+### Resume Integration
+The resume is dynamically fetched from the GitHub repository at [rowanArora/rowanArora](https://github.com/rowanArora/rowanArora). When the resume is updated in the GitHub repository, the website automatically displays the latest version.
 
 ## 🚀 Getting Started
 

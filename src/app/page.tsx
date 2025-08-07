@@ -233,7 +233,7 @@ const Navigation = () => {
             </button>
           ))}
           <a 
-            href="/Rowan-Arora-Resume.pdf" 
+            href="https://raw.githubusercontent.com/rowanArora/rowanArora/main/Rowan%20Arora%20-%20Resume.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-sage-600 text-cream-50 px-6 py-2 rounded-full font-semibold hover:bg-sage-700 hover:border-2 hover:border-sage-800 transition-all duration-200 shadow-md"
